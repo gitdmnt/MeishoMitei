@@ -1,0 +1,50 @@
+body {
+  -webkit-font-smoothing: auto;
+}
+
+:root {
+  --bg-l: rgb(230, 222, 207);
+  --bg-l-alt: rgb(246, 137, 41);
+  --darkgrey: rgb(41, 41, 44);
+  --grey: #6d6d7b;
+  --c1: #ff0000;
+  --c2: #00ff00;
+}
+
+.theme-light {
+  /* 通常の背景色 */
+  --background-primary: var(--bg-l);
+  /* ごくたまにボタンとかに出てくる背景色 */
+  --background-primary-alt: var(--bg-l-alt);
+  /* inactive状態のヘッダーや右下のバー、UIのラインや別タブなど */
+  --background-secondary: var(--bg-l-alt);
+  /* active状態のヘッダーや */
+  --background-secondary-alt: var(--bg-l-alt);
+  /* 通常のテキスト */
+  --text-normal: var(--darkgrey);
+  /* ちょっと薄めの文字 - 見出しとか */
+  --text-faint: var(--grey);
+  --text-title-h1: var(--light-red);
+  --text-title-h2: var(--light-orange);
+  --text-title-h3: var(--light-yellow);
+  --text-title-h4: var(--light-green);
+  --text-title-h5: var(--light-aqua);
+  --text-title-h6: var(--light-purple);
+  --text-link: var(--light-blue);
+  --text-a: var(--light-dim-blue);
+  --text-a-hover: var(--light-blue);
+  --text-mark: rgba(215, 153, 33, 0.4);
+  /* light-yellow */
+  --pre-code: var(--bg1-light);
+  --text-highlight-bg: var(--light-dim-green);
+  --interactive-accent: var(--bg5-light);
+  --interactive-before: var(--bg5-light);
+  --background-modifier-border: var(--bg5-light);
+  --text-accent: var(--light-dim-green);
+  --interactive-accent-rgb: var(--light-dim-green);
+  --inline-code: var(--light-blue);
+  --code-block: var(--fg-light);
+  --vim-cursor: var(--light-blue);
+  --text-selection: rgba(189, 174, 147, 0.5);
+  /* light3 */
+}
