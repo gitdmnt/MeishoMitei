@@ -6,26 +6,212 @@ body {
 /*     :var(--c);    */
 
 :root {
-  --bg1: #fff;
-  --bg2: #ff0;
-  --c: #0f0;
+  --lighter-blue: #edfdff;
+  --light-blue: #b1f5ff;
+  --blue: #25e0fd;
+  --dark-blue: #0082b5;
+  --transparent-blue: #b1f5ff80;
+  --transparent-lighter-blue: #edfdff80;
+
+  --white: #fff;
+  --dark-gray: #666;
+  --black: #333;
+
+  --lighter-orange: #ffd3be;
+  --light-orange: #ff9b3d;
+  --orange: #ff8411;
 }
 
 .theme-light {
-  /* 通常の背景色 */
-  --background-primary: #c4c0c0;
-  /* コードブロックの色 */
-  --background-primary-alt: var(--c);
-  /* inactive状態のヘッダーや右下のバー、UIのラインや別タブなど */
-  --background-secondary: var(--bg2);
-  /* active状態のヘッダーや */
-  --background-secondary-alt: #080;
-  --background-modifier-border: #f00;
-  --background-modifier-border-focus:#00f;
-  --background-modifier-hover: #0ff;
-  --background-modifier-border-focus: #088;
-  --background-modifier-border-hover: #0cc;
+  --background-primary: var(--white);
+  --background-primary-alt: var(--lighter-blue);
+  --background-secondary: var(--white);
+  --background-secondary-alt: var(--white);
+
+  --background-modifier-hover: var(--light-blue);
+  --background-modifier-border: var(--light-blue);
+  --background-modifier-cover: transparent;
+  --background-modifier-border-focus: var(--light-blue);
+  --background-modifier-border-hover: var(--light-blue);
+
+  /* ヘッダーの設定 */
+
+  .workspace-tab-header-container-inner {
+    --animatin-dur: 10ms;
+  }
+
+  /* 見出しの設定 */
+
   .inline-title {
-      color: #f00;
+    color: var(--black);
+    font-size: 40pt;
+    font-weight: lighter;
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
+      "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  }
+
+  /* エディター */
+  .markdown-source-view {
+    .cm-header {
+      color: var(--blue);
     }
+    .cm-header-1 {
+      padding-inline-start: 1rem;
+      padding-inline-end: 2rem;
+      padding-block: 0.5rem;
+      color: var(--white);
+      background-color: var(--blue);
+    }
+    .cm-header + .cm-header-1 {
+      margin-inline-start: -2rem;
+      padding-inline-start: 0;
+    }
+    .cm-header-2 {
+      padding-inline-start: 1rem;
+      border-inline-start: 5px solid var(--blue);
+      color: var(--orange);
+    }
+    .cm-header + .cm-header-2 {
+      padding-inline-start: 0;
+      border-inline-start: 0px solid var(--blue);
+    }
+    .cm-header-3 {
+      padding-inline-start: 1rem;
+      border-inline-start: 5px solid var(--blue);
+    }
+    .cm-header + .cm-header-3 {
+      padding-inline-start: 0;
+      border-inline-start: 0px solid var(--blue);
+    }
+  }
+
+  /* リーダー */
+  .markdown-reading-view {
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--dark-blue);
+      font-weight: lighter;
+      font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    & h1 {
+      font-weight: normal;
+      padding-inline-start: 1rem;
+      padding-inline-end: 2rem;
+      padding-block: 0.5rem;
+      color: var(--white);
+      background-color: var(--blue);
+    }
+    & h2 {
+      color: var(--orange);
+    }
+  }
+
+  /* 本文の設定 */
+
+  --text-normal: var(--dark-gray);
+  --text-muted: var(--dark-blue);
+  --text-faint: var(--dark-blue);
+  --text-on-accent: white;
+  --text-error: var(--orange);
+  --text-success: var(--blue);
+  --text-selection: var(--transparent-blue);
+
+  --text-accent: var(--dark-blue);
+  --text-accent-hover: var(--blue);
+  --interactive-normal: var(--light-blue);
+  --interactive-hover: var(--blue);
+  --interactive-accent: var(--light-orange);
+  --interactive-accent-hover: var(--orange);
+  --interactive-accent-hsl: 197, 100, 35;
+
+  .markdown-reading-view {
+    & p {
+      text-indent: 1rem;
+      font-weight: normal;
+      font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    & br {
+      display: none;
+    }
+  }
+
+  /* テーブルの設定 */
+
+  .table-wrapper {
+    & * {
+      font-size: 0.9rem;
+    }
+
+    & code {
+      font-size: 0.8rem;
+    }
+
+    & table {
+      border-color: transparent;
+    }
+
+    .table-editor {
+      & th {
+        border: none;
+        padding-block: 0.5rem;
+        border-block-end: 5px solid var(--lighter-blue);
+        color: var(--black);
+      }
+      & td {
+        border: none;
+        border-block-end: 1rem solid transparent;
+      }
+    }
+  }
+  .markdown-reading-view {
+    & table {
+      width: 100%;
+      & thead {
+        & th {
+          border: none;
+          padding-block: 0.5rem;
+          background-color: var(--light-blue);
+          color: var(--black);
+        }
+      }
+      & tbody {
+        & tr:nth-child(even) {
+          background-color: var(--lighter-blue);
+        }
+      }
+      & td {
+        font-size: 0.9rem;
+        padding-block: 1.5rem;
+        border: none;
+      }
+    }
+  }
+
+  .tag {
+    background-color: var(--light-blue);
+  }
+  .cm-hashtag {
+    background-color: var(--light-blue);
+  }
+
+  /* ポップアップウィンドウ */
+  .modal-container {
+    background-color: #ffffff20;
+    backdrop-filter: blur(2px);
+    box-shadow: none;
+
+    .prompt,
+    .modal,
+    .mod-dim {
+      border: 1px solid transparent;
+      box-shadow: 20px 20px 40px color-mix(in srgb, #b1f5ff, #cacaca);
+    }
+  }
 }
+

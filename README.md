@@ -1,7 +1,7 @@
-# 新しいObsidianのテーマ
+# 新しい Obsidian のテーマ
 
-作業ファイルはtheme.css
+作業ファイルは theme.css
 
-app.cssはObsidianのものをコピーしてきた
+app.css は Obsidian のものをコピーしてきた
 
-mapping.cssはapp.cssのうち、ユーザーが改変することを想定している変数を定義している部分の切り出し
+mapping.css は app.css のうち、ユーザーが改変することを想定している変数を定義している部分の切り出し
