@@ -1,4 +1,4 @@
-# 新しい Obsidian のテーマ
+# Obsidianのテーマをかわいくしたかった
 
 作業ファイルは theme.css
 
