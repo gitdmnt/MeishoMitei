@@ -53,35 +53,34 @@ body {
   /* エディター */
   .markdown-source-view {
     .cm-header {
-      color: var(--blue);
+      color: var(--dark-blue);
     }
     .cm-header-1 {
-      padding-inline-start: 1rem;
-      padding-inline-end: 2rem;
       padding-block: 0.5rem;
-      color: var(--white);
-      background-color: var(--blue);
+      font-weight: normal;
+      border-block-end: 2px solid var(--dark-blue);
+      color: var(--dark-blue);
     }
     .cm-header + .cm-header-1 {
-      margin-inline-start: -2rem;
+      margin-inline-start: 0;
       padding-inline-start: 0;
     }
     .cm-header-2 {
       padding-inline-start: 1rem;
-      border-inline-start: 5px solid var(--blue);
+      border-inline-start: 5px solid var(--dark-blue);
       color: var(--orange);
     }
     .cm-header + .cm-header-2 {
       padding-inline-start: 0;
-      border-inline-start: 0px solid var(--blue);
+      border-inline-start: 0px solid var(--dark-blue);
     }
     .cm-header-3 {
       padding-inline-start: 1rem;
-      border-inline-start: 5px solid var(--blue);
+      border-inline-start: 5px solid var(--dark-blue);
     }
     .cm-header + .cm-header-3 {
       padding-inline-start: 0;
-      border-inline-start: 0px solid var(--blue);
+      border-inline-start: 0px solid var(--dark-blue);
     }
   }
 
@@ -94,17 +93,16 @@ body {
     h5,
     h6 {
       color: var(--dark-blue);
-      font-weight: lighter;
+      font-weight: light;
       font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
         "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
     }
     & h1 {
+      font-size: 3rem;
       font-weight: normal;
-      padding-inline-start: 1rem;
-      padding-inline-end: 2rem;
       padding-block: 0.5rem;
-      color: var(--white);
-      background-color: var(--blue);
+      border-block-end: 2px solid var(--dark-blue);
+      color: var(--dark-blue);
     }
     & h2 {
       color: var(--orange);
