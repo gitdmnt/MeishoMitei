@@ -157,7 +157,7 @@ body {
     .table-editor {
       & th {
         border: none;
-        padding-block: 0.5rem;
+        padding-block: 0.2rem;
         border-block-end: 5px solid var(--lighter-blue);
         color: var(--black);
       }
@@ -185,7 +185,7 @@ body {
       }
       & td {
         font-size: 0.9rem;
-        padding-block: 1.5rem;
+        padding-block: 0.5rem;
         border: none;
       }
     }
