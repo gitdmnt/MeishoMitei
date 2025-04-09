@@ -6,33 +6,32 @@ body {
 /*     :var(--c);    */
 
 :root {
-  --lighter-blue: #edfdff;
-  --light-blue: #b1f5ff;
-  --blue: #25e0fd;
-  --dark-blue: #0082b5;
-  --transparent-blue: #b1f5ff80;
-  --transparent-lighter-blue: #edfdff80;
-
   --white: #fff;
+  --lighter-gray: #f5f5f5;
+  --light-gray: #eaeaea;
+  --gray: #cacaca;
   --dark-gray: #666;
+  --transparent-gray: #cacaca80;
+  --transparent-lighter-gray: #f5f5f580;
+
   --black: #333;
 
-  --lighter-orange: #ffd3be;
-  --light-orange: #ff9b3d;
-  --orange: #ff8411;
+  --lighter-purple: #e0c6e0;
+  --light-purple: #d1a6d1;
+  --purple: #a76fa7;
 }
 
 .theme-light {
   --background-primary: var(--white);
-  --background-primary-alt: var(--lighter-blue);
+  --background-primary-alt: var(--lighter-gray);
   --background-secondary: var(--white);
   --background-secondary-alt: var(--white);
 
-  --background-modifier-hover: var(--light-blue);
-  --background-modifier-border: var(--light-blue);
+  --background-modifier-hover: var(--light-gray);
+  --background-modifier-border: var(--light-gray);
   --background-modifier-cover: transparent;
-  --background-modifier-border-focus: var(--light-blue);
-  --background-modifier-border-hover: var(--light-blue);
+  --background-modifier-border-focus: var(--light-gray);
+  --background-modifier-border-hover: var(--light-gray);
 
   /* ヘッダーの設定 */
 
@@ -53,13 +52,13 @@ body {
   /* エディター */
   .markdown-source-view {
     .cm-header {
-      color: var(--dark-blue);
+      color: var(--dark-gray);
     }
     .cm-header-1 {
       padding-block: 0.5rem;
       font-weight: normal;
-      border-block-end: 2px solid var(--dark-blue);
-      color: var(--dark-blue);
+      border-block-end: 2px solid var(--dark-gray);
+      color: var(--dark-gray);
     }
     .cm-header + .cm-header-1 {
       margin-inline-start: 0;
@@ -67,20 +66,20 @@ body {
     }
     .cm-header-2 {
       padding-inline-start: 1rem;
-      border-inline-start: 5px solid var(--dark-blue);
-      color: var(--orange);
+      border-inline-start: 5px solid var(--dark-gray);
+      color: var(--purple);
     }
     .cm-header + .cm-header-2 {
       padding-inline-start: 0;
-      border-inline-start: 0px solid var(--dark-blue);
+      border-inline-start: 0px solid var(--dark-gray);
     }
     .cm-header-3 {
       padding-inline-start: 1rem;
-      border-inline-start: 5px solid var(--dark-blue);
+      border-inline-start: 5px solid var(--dark-gray);
     }
     .cm-header + .cm-header-3 {
       padding-inline-start: 0;
-      border-inline-start: 0px solid var(--dark-blue);
+      border-inline-start: 0px solid var(--dark-gray);
     }
   }
 
@@ -92,7 +91,7 @@ body {
     h4,
     h5,
     h6 {
-      color: var(--dark-blue);
+      color: var(--dark-gray);
       font-weight: light;
       font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
         "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
@@ -101,30 +100,30 @@ body {
       font-size: 3rem;
       font-weight: normal;
       padding-block: 0.5rem;
-      border-block-end: 2px solid var(--dark-blue);
-      color: var(--dark-blue);
+      border-block-end: 2px solid var(--dark-gray);
+      color: var(--dark-gray);
     }
     & h2 {
-      color: var(--orange);
+      color: var(--purple);
     }
   }
 
   /* 本文の設定 */
 
   --text-normal: var(--dark-gray);
-  --text-muted: var(--dark-blue);
-  --text-faint: var(--dark-blue);
+  --text-muted: var(--dark-gray);
+  --text-faint: var(--dark-gray);
   --text-on-accent: white;
-  --text-error: var(--orange);
-  --text-success: var(--blue);
-  --text-selection: var(--transparent-blue);
+  --text-error: var(--purple);
+  --text-success: var(--gray);
+  --text-selection: var(--transparent-gray);
 
-  --text-accent: var(--dark-blue);
-  --text-accent-hover: var(--blue);
-  --interactive-normal: var(--light-blue);
-  --interactive-hover: var(--blue);
-  --interactive-accent: var(--light-orange);
-  --interactive-accent-hover: var(--orange);
+  --text-accent: var(--dark-gray);
+  --text-accent-hover: var(--gray);
+  --interactive-normal: var(--light-gray);
+  --interactive-hover: var(--gray);
+  --interactive-accent: var(--light-purple);
+  --interactive-accent-hover: var(--purple);
   --interactive-accent-hsl: 197, 100, 35;
 
   .markdown-reading-view {
@@ -158,7 +157,7 @@ body {
       & th {
         border: none;
         padding-block: 0.2rem;
-        border-block-end: 5px solid var(--lighter-blue);
+        border-block-end: 5px solid var(--lighter-gray);
         color: var(--black);
       }
       & td {
@@ -174,13 +173,13 @@ body {
         & th {
           border: none;
           padding-block: 0.5rem;
-          background-color: var(--light-blue);
+          background-color: var(--light-gray);
           color: var(--black);
         }
       }
       & tbody {
         & tr:nth-child(even) {
-          background-color: var(--lighter-blue);
+          background-color: var(--lighter-gray);
         }
       }
       & td {
@@ -192,10 +191,10 @@ body {
   }
 
   .tag {
-    background-color: var(--light-blue);
+    background-color: var(--light-gray);
   }
   .cm-hashtag {
-    background-color: var(--light-blue);
+    background-color: var(--light-gray);
   }
 
   /* ポップアップウィンドウ */
